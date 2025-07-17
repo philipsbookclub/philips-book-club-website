@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philip's Book Club - Home</title>
+    <!-- Tailwind CSS CDN for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Lora for headlines, Literata for body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Literata:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Literata font to the entire body for general text */
+        body {
+            font-family: 'Literata', serif;
+        }
+        /* Apply Lora font to all heading elements */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+        }
+        /* Custom CSS for responsive video embeds (16:9 aspect ratio) */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* This creates a 16:9 aspect ratio (height / width = 9 / 16 = 0.5625) */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.5rem; /* Matches Tailwind's rounded-lg */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        /* Hover effect for photo gallery images */
+        .photo-card img {
+            transition: transform 0.3s ease-in-out;
+        }
+        .photo-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header Section: Consistent across all pages -->
+    <header class="bg-white shadow-sm py-4 px-6 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Site Title/Logo with rounded corners and hover effect -->
+            <a href="index.html" class="text-2xl font-bold text-blue-700 rounded-md p-2 hover:bg-blue-50 transition duration-300">Philip's Book Club</a>
+            <!-- Navigation Menu -->
+            <nav>
+                <ul class="flex space-x-4 sm:space-x-6">
+                    <li><a href="index.html" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300 rounded-md p-2 hover:bg-blue-50">Home</a></li>
+                    <li><a href="about.html" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300 rounded-md p-2 hover:bg-blue-50">About Me</a></li>
+                    <li><a href="resources.html" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300 rounded-md p-2 hover:bg-blue-50">Resources</a></li>
+                    <li><a href="classes.html" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300 rounded-md p-2 hover:bg-blue-50">Classes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area for the Home Page -->
+    <main class="container mx-auto my-8 p-6 bg-white rounded-lg shadow-md">
+        <!-- Main Heading for the Home Page -->
+        <h1 class="text-4xl font-bold text-gray-900 mb-6">Welcome to Philip's Book Club!</h1>
+        <!-- Introduction Paragraph -->
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">
+            Dive into the world of literature with Philip's Book Club. We explore a diverse range of books, engage in lively discussions, and foster a community of passionate readers. Whether you're a seasoned bookworm or just starting your reading journey, you'll find a welcoming space here. Join us as we uncover new stories, share insights, and connect through the power of books.
+        </p>
+
+        <!-- New Buttons for Navigation -->
+        <div class="flex flex-col sm:flex-row justify-center gap-4 mb-10">
+            <a href="classes.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 text-center">Explore Classes</a>
+            <a href="resources.html" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 text-center">Discover Resources</a>
+        </div>
+
+        <!-- Section for Latest Discussion / Featured Video -->
+        <h2 class="text-3xl font-semibold text-gray-800 mb-4">Our Latest Discussion</h2>
+        <!-- Responsive video container for embedding YouTube videos -->
+        <div class="video-container mb-8 shadow-lg">
+            <!-- Example YouTube Video Embed: Replace 'src' with your desired video URL -->
+            <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ" <!-- Example video: "Never Gonna Give You Up" by Rick Astley -->
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+            ></iframe>
+        </div>
+        <p class="text-gray-600 text-sm italic mb-8">
+            *This is an example of an embedded YouTube video. To embed your own video, simply replace the `src` URL in the `<iframe>` tag with the embed URL of your desired YouTube video. You can find this by clicking "Share" then "Embed" on any YouTube video.
+        </p>
+
+        <!-- Section for What We Offer -->
+        <h2 class="text-3xl font-semibold text-gray-800 mt-10 mb-4">What We Offer</h2>
+        <!-- Grid layout for features, responsive for different screen sizes -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+            <!-- Feature Card 1 -->
+            <div class="bg-blue-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                <h3 class="text-xl font-bold text-blue-700 mb-2">Engaging Discussions</h3>
+                <p class="text-gray-700">Participate in thought-provoking discussions on various literary works, sharing your perspectives and hearing from others.</p>
+            </div>
+            <!-- Feature Card 2 -->
+            <div class="bg-blue-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                <h3 class="text-xl font-bold text-blue-700 mb-2">Diverse Book Selection</h3>
+                <p class="text-gray-700">From classic novels to contemporary bestsellers, our selections cover a wide range of genres and authors.</p>
+            </div>
+            <!-- Feature Card 3 -->
+            <div class="bg-blue-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                <h3 class="text-xl font-bold text-blue-700 mb-2">Community Connection</h3>
+                <p class="text-gray-700">Connect with fellow book lovers, make new friends, and expand your literary network.</p>
+            </div>
+        </div>
+
+        <!-- Section for Photos -->
+        <h2 class="text-3xl font-semibold text-gray-800 mt-10 mb-4">Our Photo Gallery</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Photo 1 -->
+            <div class="rounded-lg overflow-hidden shadow-md photo-card">
+                <img src="https://placehold.co/400x300/a8dadc/1d3557?text=Book+Club+Meet" alt="Book Club Meetup" class="w-full h-48 object-cover">
+            </div>
+            <!-- Photo 2 -->
+            <div class="rounded-lg overflow-hidden shadow-md photo-card">
+                <img src="https://placehold.co/400x300/f4a261/2a9d8f?text=Discussion+Time" alt="Discussion Time" class="w-full h-48 object-cover">
+            </div>
+            <!-- Photo 3 -->
+            <div class="rounded-lg overflow-hidden shadow-md photo-card">
+                <img src="https://placehold.co/400x300/e76f51/f4a261?text=New+Reads" alt="New Reads" class="w-full h-48 object-cover">
+            </div>
+            <!-- Photo 4 -->
+            <div class="rounded-lg overflow-hidden shadow-md photo-card">
+                <img src="https://placehold.co/400x300/2a9d8f/e9c46a?text=Happy+Readers" alt="Happy Readers" class="w-full h-48 object-cover">
+            </div>
+            <!-- Photo 5 -->
+            <div class="rounded-lg overflow-hidden shadow-md photo-card">
+                <img src="https://placehold.co/400x300/e9c46a/264653?text=Book+Stack" alt="Book Stack" class="w-full h-48 object-cover">
+            </div>
+            <!-- Photo 6 -->
+            <div class="rounded-lg overflow-hidden shadow-md photo-card">
+                <img src="https://placehold.co/400x300/264653/e76f51?text=Group+Reading" alt="Group Reading" class="w-full h-48 object-cover">
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section: Consistent across all pages -->
+    <footer class="bg-gray-800 text-white py-6 mt-8">
+        <div class="container mx-auto text-center text-gray-400">
+            <p>&copy; 2025 Philip's Book Club. All rights reserved.</p>
+            <p class="mt-2">Designed with passion for readers.</p>
+        </div>
+    </footer>
+</body>
+</html>
