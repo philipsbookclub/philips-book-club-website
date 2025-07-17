@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philip's Book Club - Classes</title>
+    <!-- Tailwind CSS CDN for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Lora for headlines, Literata for body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Literata:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Literata font to the entire body for general text */
+        body {
+            font-family: 'Literata', serif;
+        }
+        /* Apply Lora font to all heading elements */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+        }
+        /* Custom CSS for responsive video embeds (16:9 aspect ratio) */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* This creates a 16:9 aspect ratio (height / width = 9 / 16 = 0.5625) */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.5rem; /* Matches Tailwind's rounded-lg */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        /* Hover effect for photo gallery images */
+        .photo-card img {
+            transition: transform 0.3s ease-in-out;
+        }
+        .photo-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header Section: Consistent across all pages -->
+    <header class="bg-white shadow-sm py-4 px-6 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Site Title/Logo with rounded corners and hover effect -->
+            <a href="index.html" class="text-2xl font-bold text-blue-700 rounded-md p-2 hover:bg-blue-50 transition duration-300">Philip's Book Club</a>
+            <!-- Navigation Menu -->
+            <nav>
+                <ul class="flex space-x-4 sm:space-x-6">
+                    <li><a href="index.html" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300 rounded-md p-2 hover:bg-blue-50">Home</a></li>
+                    <li><a href="about.html" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300 rounded-md p-2 hover:bg-blue-50">About Me</a></li>
+                    <li><a href="resources.html" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300 rounded-md p-2 hover:bg-blue-50">Resources</a></li>
+                    <li><a href="classes.html" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300 rounded-md p-2 hover:bg-blue-50">Classes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area for the Classes Page -->
+    <main class="container mx-auto my-8 p-6 bg-white rounded-lg shadow-md">
+        <!-- Main Heading for the Classes Page -->
+        <h1 class="text-4xl font-bold text-gray-900 mb-6">Our Engaging Classes</h1>
+        <!-- Classes Content -->
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">
+            Deepen your understanding of literature and writing through our interactive classes. Designed for all levels, these sessions offer structured learning and lively discussions on various literary topics.
+        </p>
+
+        <h2 class="text-3xl font-semibold text-gray-800 mb-4">Upcoming Classes</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <!-- Class Card 1 -->
+            <div class="bg-purple-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                <h3 class="text-xl font-bold text-purple-700 mb-2">Introduction to Classic Novels</h3>
+                <p class="text-gray-700 mb-2">Explore foundational works of literature, from Jane Austen to Charles Dickens. Perfect for beginners.</p>
+                <p class="text-sm text-gray-600"><strong>Instructor:</strong> Philip | <strong>Duration:</strong> 6 Weeks | <strong>Starts:</strong> September 10, 2025</p>
+            </div>
+            <!-- Class Card 2 -->
+            <div class="bg-purple-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                <h3 class="text-xl font-bold text-purple-700 mb-2">Modern Poetry Appreciation</h3>
+                <p class="text-gray-700 mb-2">Delve into the nuances of contemporary poetry and discover new voices.</p>
+                <p class="text-sm text-gray-600"><strong>Instructor:</strong> Guest Lecturer | <strong>Duration:</strong> 4 Weeks | <strong>Starts:</strong> October 5, 2025</p>
+            </div>
+            <!-- Class Card 3 -->
+            <div class="bg-purple-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                <h3 class="text-xl font-bold text-purple-700 mb-2">Creative Writing Workshop</h3>
+                <p class="text-gray-700 mb-2">Unleash your inner author! Learn techniques for fiction, poetry, and non-fiction writing.</p>
+                <p class="text-sm text-gray-600"><strong>Instructor:</strong> Philip | <strong>Duration:</strong> 8 Weeks | <strong>Starts:</strong> November 1, 2025</p>
+            </div>
+        </div>
+
+        <!-- Section for a Featured Video (e.g., a class preview) -->
+        <h2 class="text-3xl font-semibold text-gray-800 mb-4">Preview Our Learning Experience</h2>
+        <div class="video-container mb-8 shadow-lg">
+            <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ" <!-- Example video: Replace with a class preview or testimonial -->
+                title="Class Preview Video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+            ></iframe>
+        </div>
+        <p class="text-gray-600 text-sm italic mb-8">
+            *This is an example of an embedded YouTube video. You can replace the `src` URL with a video preview of a class or a testimonial.
+        </p>
+
+        <!-- Section for Photos -->
+        <h2 class="text-3xl font-semibold text-gray-800 mt-10 mb-4">Classroom Moments</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Photo 1 -->
+            <div class="rounded-lg overflow-hidden shadow-md photo-card">
+                <img src="https://placehold.co/400x300/ffadad/ffd6a5?text=Class+Discussion" alt="Class Discussion" class="w-full h-48 object-cover">
+            </div>
+            <!-- Photo 2 -->
+            <div class="rounded-lg overflow-hidden shadow-md photo-card">
+                <img src="https://placehold.co/400x300/ffd6a5/ffadad?text=Lecture+Session" alt="Lecture Session" class="w-full h-48 object-cover">
+            </div>
+            <!-- Photo 3 -->
+            <div class="rounded-lg overflow-hidden shadow-md photo-card">
+                <img src="https://placehold.co/400x300/fdffb6/caffbf?text=Writing+Exercise" alt="Writing Exercise" class="w-full h-48 object-cover">
+            </div>
+            <!-- Photo 4 -->
+            <div class="rounded-lg overflow-hidden shadow-md photo-card">
+                <img src="https://placehold.co/400x300/caffbf/a0c4ff?text=Student+Work" alt="Student Work" class="w-full h-48 object-cover">
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section: Consistent across all pages -->
+    <footer class="bg-gray-800 text-white py-6 mt-8">
+        <div class="container mx-auto text-center text-gray-400">
+            <p>&copy; 2025 Philip's Book Club. All rights reserved.</p>
+            <p class="mt-2">Designed with passion for readers.</p>
+        </div>
+    </footer>
+</body>
+</html>
