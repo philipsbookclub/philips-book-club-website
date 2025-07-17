@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philip's Book Club - Resources</title>
+    <!-- Tailwind CSS CDN for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Lora for headlines, Literata for body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Literata:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Literata font to the entire body for general text */
+        body {
+            font-family: 'Literata', serif;
+        }
+        /* Apply Lora font to all heading elements */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+        }
+        /* Custom CSS for responsive video embeds (16:9 aspect ratio) */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* This creates a 16:9 aspect ratio (height / width = 9 / 16 = 0.5625) */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.5rem; /* Matches Tailwind's rounded-lg */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        /* Hover effect for photo gallery images */
+        .photo-card img {
+            transition: transform 0.3s ease-in-out;
+        }
+        .photo-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header Section: Consistent across all pages -->
+    <header class="bg-white shadow-sm py-4 px-6 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Site Title/Logo with rounded corners and hover effect -->
+            <a href="index.html" class="text-2xl font-bold text-blue-700 rounded-md p-2 hover:bg-blue-50 transition duration-300">Philip's Book Club</a>
+            <!-- Navigation Menu -->
+            <nav>
+                <ul class="flex space-x-4 sm:space-x-6">
+                    <li><a href="index.html" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300 rounded-md p-2 hover:bg-blue-50">Home</a></li>
+                    <li><a href="about.html" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300 rounded-md p-2 hover:bg-blue-50">About Me</a></li>
+                    <li><a href="resources.html" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300 rounded-md p-2 hover:bg-blue-50">Resources</a></li>
+                    <li><a href="classes.html" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300 rounded-md p-2 hover:bg-blue-50">Classes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area for the Resources Page -->
+    <main class="container mx-auto my-8 p-6 bg-white rounded-lg shadow-md">
+        <!-- Main Heading for the Resources Page -->
+        <h1 class="text-4xl font-bold text-gray-900 mb-6">Valuable Resources for Readers</h1>
+        <!-- Resources Content -->
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">
+            Enhance your reading experience with our curated list of resources. From tools for tracking your reads to platforms for discovering new authors, we've gathered everything you need to deepen your literary journey.
+        </p>
+
+        <h2 class="text-3xl font-semibold text-gray-800 mb-4">Recommended Reading Tools</h2>
+        <ul class="list-disc list-inside text-lg text-gray-700 mb-8 space-y-2">
+            <li>Goodreads: Track your reading, discover new books, and connect with other readers.</li>
+            <li>LibraryThing: Catalog your books, connect with libraries, and get recommendations.</li>
+            <li>Project Gutenberg: Access a vast library of free eBooks.</li>
+            <li>Audible: Explore audiobooks for on-the-go listening.</li>
+        </ul>
+
+        <!-- Section for a Featured Video (e.g., a tutorial on a reading app) -->
+        <h2 class="text-3xl font-semibold text-gray-800 mb-4">How to Get More Out of Your Reading</h2>
+        <div class="video-container mb-8 shadow-lg">
+            <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ" <!-- Example video: Replace with a relevant tutorial video -->
+                title="Reading Tips Video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+            ></iframe>
+        </div>
+        <p class="text-gray-600 text-sm italic mb-8">
+            *This is an example of an embedded YouTube video. You can replace the `src` URL with a video showcasing reading tips or a resource.
+        </p>
+
+        <!-- Section for Photos -->
+        <h2 class="text-3xl font-semibold text-gray-800 mt-10 mb-4">Resource Snapshots</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Photo 1 -->
+            <div class="rounded-lg overflow-hidden shadow-md photo-card">
+                <img src="https://placehold.co/400x300/d8f3dc/2f4f4f?text=Digital+Library" alt="Digital Library" class="w-full h-48 object-cover">
+            </div>
+            <!-- Photo 2 -->
+            <div class="rounded-lg overflow-hidden shadow-md photo-card">
+                <img src="https://placehold.co/400x300/b7e4c7/2f4f4f?text=Reading+App" alt="Reading App Interface" class="w-full h-48 object-cover">
+            </div>
+            <!-- Photo 3 -->
+            <div class="rounded-lg overflow-hidden shadow-md photo-card">
+                <img src="https://placehold.co/400x300/95d5b2/2f4f4f?text=E-reader" alt="E-reader Device" class="w-full h-48 object-cover">
+            </div>
+            <!-- Photo 4 -->
+            <div class="rounded-lg overflow-hidden shadow-md photo-card">
+                <img src="https://placehold.co/400x300/74c69d/2f4f4f?text=Book+Review" alt="Book Review Site" class="w-full h-48 object-cover">
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section: Consistent across all pages -->
+    <footer class="bg-gray-800 text-white py-6 mt-8">
+        <div class="container mx-auto text-center text-gray-400">
+            <p>&copy; 2025 Philip's Book Club. All rights reserved.</p>
+            <p class="mt-2">Designed with passion for readers.</p>
+        </div>
+    </footer>
+</body>
+</html>
